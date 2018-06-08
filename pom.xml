@@ -12,6 +12,7 @@
         <module>dubbo-user-provider</module>
         <module>dubbo-user-api</module>
         <module>dubbo-user-customer</module>
+        <module>dubbo-user-provide-rload-balance</module>
     </modules>
     <build>
          <plugins>

@@ -4,7 +4,7 @@ import com.github.api.IUserService;
 import com.github.api.User;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class UserConsumer {
+public class UserConsumerLoadBalance {
 
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("java.net.preferIPv4Stack", "true");

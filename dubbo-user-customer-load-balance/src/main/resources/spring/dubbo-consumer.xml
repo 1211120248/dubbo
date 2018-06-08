@@ -25,6 +25,13 @@
 
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
-    <dubbo:reference id="userService" check="false" interface="com.github.api.IUserService"/>
+    <dubbo:reference id="userService" check="false" interface="com.github.api.IUserService"
+    loadbalance="roundrobin"/>
 
+    <!--默认为随机负载均衡
+        Random LoadBalance 随机负载均衡
+        RoundRobin LoadBalance 轮训负载均衡
+        LeastActive LoadBalance 最少活跃调用数 使慢的提供者收到更少请求，因为越慢的提供者的调用前后计数差会越大。
+        ConsistentHash LoadBalance 一致性 Hash，相同参数的请求总是发到同一提供者。
+     -->
 </beans>
